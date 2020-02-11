@@ -1,0 +1,13 @@
+create table visitors
+(
+visitors_id integer PRIMARY KEY,
+visitorsname VARCHAR (50) unique not null,
+born integer not null,
+gender varchar(55) unique not null
+);
+create table visitor
+(
+visitors_id integer references visitors on delete restrict,
+visittime integer not null,
+treiner_id integer primary key
+);
